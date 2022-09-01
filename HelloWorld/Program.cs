@@ -6,16 +6,16 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            string[] fraudulentOrderIDs = new string[3];
-
-            fraudulentOrderIDs[0] = "A123";
-            fraudulentOrderIDs[1] = "B456";
-            fraudulentOrderIDs[2] = "C789";
-
-            for (int i = 0; i < fraudulentOrderIDs.Length; i++)
+            int[] inventory = { 200, 450, 700, 175, 250 };
+            int sum = 0;
+            int bin = 0;
+            foreach (int items in inventory)
             {
-                Console.WriteLine(fraudulentOrderIDs[i]);
+                sum += items;
+                bin++;
+                Console.WriteLine($"Bin {bin} = {items} items (Running total: {sum})");
             }
+            Console.WriteLine($"We have {sum} items in inventory.");
         }
     }
 }
