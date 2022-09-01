@@ -6,9 +6,11 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello world");
-            Console.ReadLine();
+            string user = "Voragun";
+            Console.WriteLine($"Hello, {user}");
 
+            string projectName = "First experience";
+            Console.Write($"This is {projectName} Program");
 
         }
     }
