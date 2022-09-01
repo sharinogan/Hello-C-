@@ -6,26 +6,14 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            string user = "Voragun";
-            Console.WriteLine($"Hello, {user}");
+            Random dice = new Random();
+            int roll1 = dice.Next();
+            int roll2 = dice.Next(101);
+            int roll3 = dice.Next(50, 101);
 
-            string projectName = "First experience";
-            Console.Write($"This is {projectName} Program\n"); // string interpolation
-
-            //int sum = 7 + 5;
-            //int difference = 7 - 5;
-            //int product = 7 * 5;
-            //int quotient = 7 / 5;
-
-            //Console.WriteLine("Sum : " + sum);
-            //Console.WriteLine("Difference : " + difference);
-            //Console.WriteLine("Product : " + product);
-            //Console.WriteLine("Quotient : " + quotient);
-
-            int first = 7;
-            int second = 5;
-            decimal quotient = (decimal)first / (decimal)second;
-            Console.WriteLine(quotient);
+            Console.WriteLine($"First roll: {roll1}");
+            Console.WriteLine($"Second roll: {roll2}");
+            Console.WriteLine($"Third roll: {roll3}");
         }
     }
 }
