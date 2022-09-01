@@ -6,30 +6,15 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            Random random = new Random();
-            int daysUntilExpiration = random.Next(12);
-            int discountPercentage = 0;
+            string[] fraudulentOrderIDs = new string[3];
 
-            Console.WriteLine($"{daysUntilExpiration}");
-            if (daysUntilExpiration <= 10)
+            fraudulentOrderIDs[0] = "A123";
+            fraudulentOrderIDs[1] = "B456";
+            fraudulentOrderIDs[2] = "C789";
+
+            for (int i = 0; i < fraudulentOrderIDs.Length; i++)
             {
-                Console.WriteLine("Your subscription will expire soon. Renew now!");
-            }
-            else if (daysUntilExpiration <= 5)
-            {
-                Console.WriteLine($"Your subscript expires in {daysUntilExpiration} days");
-                discountPercentage = 10;
-                Console.WriteLine($"Renew now and save {discountPercentage}%");
-            }
-            else if (daysUntilExpiration == 1)
-            {
-                Console.WriteLine("Your subscription expores within a day!");
-                discountPercentage = 20;
-                Console.WriteLine($"Renew now and save {discountPercentage}%");
-            }
-            else
-            {
-                Console.WriteLine("Your subscription has expired");
+                Console.WriteLine(fraudulentOrderIDs[i]);
             }
         }
     }
